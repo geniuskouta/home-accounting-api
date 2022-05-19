@@ -1,0 +1,29 @@
+version: "3"
+services:
+  node:
+    container_name: node_express
+    build: ./app
+    volumes:
+      - ./app:/app
+    tty:  true
+    ports:
+      - 3000:3000
+
+  postgres:
+    container_name: postgres
+    image: postgres:13
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres_db
+    volumes:
+      - db_data:/var/lib/posrgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data: {}
+
+# Followed the article below:
+# https://qiita.com/basio/items/6e32d6badd2a002de72c

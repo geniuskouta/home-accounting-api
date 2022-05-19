@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "src": ["./*"]
+    },
+    "types": [
+      "@types/jest"
+    ],
+    "resolveJsonModule": true,
+    "outDir": "./dist",       
+    "esModuleInterop": true,  
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                          
+    "skipLibCheck": true,
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "__tests__",
+    "tests",
+    "**/*.test.ts",
+    "jest*.config.ts",
+    "src/jest.*.ts",
+    "src/testTableTruncate.ts"
+  ]
+}
