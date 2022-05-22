@@ -1,13 +1,13 @@
 version: "3"
 services:
-  node:
-    container_name: node_express
-    build: ./app
-    volumes:
-      - ./app:/app
-    tty:  true
-    ports:
-      - 3000:3000
+  # node:
+  #   container_name: node_express
+  #   build: ./app
+  #   volumes:
+  #     - ./app:/app
+  #   tty:  true
+  #   ports:
+  #     - 3000:3000
 
   postgres:
     container_name: postgres
